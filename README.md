@@ -35,7 +35,7 @@ Used Tech Stack
 4. Workbensh
 ---
 
-### Current Features:
+### Current_Features:
 
 1. Login/Register
 
@@ -51,7 +51,7 @@ Used Tech Stack
 
 ---
 
-### Ai_model on heroku
+### Ai_model_on_heroku
 
 
 ---
@@ -60,11 +60,11 @@ Used Tech Stack
 <img src="screenshots/one.png" height="400">
 
 ---
-## user profile
+## user_profile
 
-## error when try to publish empty post
+## error_when_try_to_publish_empty_post
 
-## recommendation using Ai 
+## recommendation_using_Ai 
 
 <img src="screenshots/two.png" height="400">
 
