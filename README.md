@@ -25,7 +25,7 @@ In this section you will know More bout this interesting project :smiley:
  
 ---
 
-#### An open source Social Network
+#### An_open_source_Social_Network
 
 Used Tech Stack
 
