@@ -11,7 +11,7 @@ In this section you will know More bout this interesting project :smiley:
 - [An_open_source_Social_Network](#An_open_source_Social_Network)
 - [Current_Features](#Current_Features)
 - [Ai_model_on_heroku](#Ai_model_on_heroku)
-- [Homepage](#Home page)
+- [Homepage](#Home_page)
 - [user_profile](#user_profile)
 - [error_when_try_to_publish_empty_post](#error_when_try_to_publish_empty_post)
 - [recommendation_using_Ai ](#recommendation_using_Ai )
