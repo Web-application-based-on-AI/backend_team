@@ -55,7 +55,7 @@ Used Tech Stack
 
 Ai model we deploy it on heroku to try model 
 
-<img src="./img/finaln.PNG" height="400">
+<img src="./img/finaln.PNG" height="400" align = 'center'>
 
 [link heroku](https://posts-classification.herokuapp.com/)
 
