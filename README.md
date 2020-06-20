@@ -134,7 +134,7 @@ New user must has an account with the following data:
 users can comment to any post and appear to it , Users see posts from homepage
 
 <p align = "center">
-<img src="./img/comment.PNG" width ="300" height = "400">
+<img src="./img/comment.PNG" width ="500" height = "400">
 </p>
 
 --- 
