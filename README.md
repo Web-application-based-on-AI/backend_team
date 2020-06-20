@@ -66,23 +66,25 @@ User must has an account, supplying the following data:
 
 - Password
 
-Searching in database if email & password exists, the second form must be opened
-
-If not, display a message to allow a new user to sign up  New user may click sign up, the sign up form must be opened
+Searching in database if email & password exists, the second form must be opened If not, display a message to allow a new user to sign up  New user may click sign up, the sign up form must be opened
 
 <p align = "center"> 
 <img src="./img/homepage.PNG" height="400" width = "700">
 </p>
 
 ---
+
+
 ## Homepage
 
 * we use this design in frontend using bootstrap to make social media responsive 
 
 <p align = "center">
-<img src="./img/signin.PNG" height="400" width = "700">
+<img src="./img/signin.PNG" height="700" width = "400">
 </p>
+
 ---
+
 ## user_profile
 
 ## error_when_try_to_publish_empty_post
