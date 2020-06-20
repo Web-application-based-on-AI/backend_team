@@ -80,7 +80,7 @@ Searching in database if email & password exists, the second form must be opened
 * we use this design in frontend using bootstrap to make social media responsive 
 
 <p align = "center">
-<img src="./img/signin.PNG" height="700" width = "400">
+<img src="./img/signin.PNG" height="600" width = "400">
 </p>
 
 ---
