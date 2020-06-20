@@ -53,9 +53,10 @@ Used Tech Stack
 
 ### Ai_model_on_heroku
 
-Ai model we deploy it on heroku to try model 
-
+* Ai model we deploy it on heroku to try model 
+<p align = "center">
 <img src="./img/finaln.PNG" height="400" align="center">
+</p>
 
 [link heroku](https://posts-classification.herokuapp.com/)
 
@@ -63,8 +64,11 @@ Ai model we deploy it on heroku to try model
 ---
 ## Homepage
 
+* we use this design in frontend using bootstrap to make social media responsive 
+* 
+<p align = "center">
 <img src="screenshots/one.png" height="400">
-
+</p>
 ---
 ## user_profile
 
