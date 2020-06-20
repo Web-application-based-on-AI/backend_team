@@ -69,12 +69,34 @@ User must has an account, supplying the following data:
 Searching in database if email & password exists, the second form must be opened If not, display a message to allow a new user to sign up  New user may click sign up, the sign up form must be opened
 
 <p align = "center"> 
-<img src="./img/homepage.PNG" height="400" width = "700">
+<img src="./img/signin.PNG" height="400" width = "700">
 </p>
 
 ---
 
+## sign up form
 
+New user must has an account with the following data:
+
+* Email
+
+* Password
+
+* User name
+
+* Picture to user (if exist)
+
+* Date of birth
+
+* Detailed location information
+
+<p align = "center">
+ 
+<img src="./img/signup.PNG" >
+
+</p>
+
+---
 ## Homepage
 
 * we use this design in frontend using bootstrap to make social media responsive 
