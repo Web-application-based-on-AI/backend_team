@@ -69,7 +69,7 @@ User must has an account, supplying the following data:
 Searching in database if email & password exists, the second form must be opened If not, display a message to allow a new user to sign up  New user may click sign up, the sign up form must be opened
 
 <p align = "center"> 
-<img src="./img/signin.PNG" height="400" width = "700">
+<img src="./img/signin.PNG">
 </p>
 
 ---
@@ -102,7 +102,7 @@ New user must has an account with the following data:
 * we use this design in frontend using bootstrap to make social media responsive 
 
 <p align = "center">
-<img src="./img/signin.PNG" height="600" width = "500">
+<img src="./img/homepage.PNG">
 </p>
 
 ---
