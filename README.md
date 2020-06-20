@@ -183,6 +183,15 @@ This page belongs to treat posts which publish in page using natural language pr
 
 [link heroku](https://posts-classification.herokuapp.com/)
 
+---
+
+## Authors
+
+* 💕 team 
+
+---
+
+[Back To The Top](#README.md) :point_up:
 
 
 Show your support by 🌟 the project!!
