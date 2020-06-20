@@ -57,7 +57,7 @@ Used Tech Stack
 
 <p align = "center">
  
-<img src="file:///C:/Users/A/Desktop/img/img/homepage.PNG" height="400" align="center">
+<img src="./img/homepage.PNG" height="400">
  
 </p>
 
@@ -68,9 +68,9 @@ Used Tech Stack
 ## Homepage
 
 * we use this design in frontend using bootstrap to make social media responsive 
-* 
+
 <p align = "center">
-<img src="screenshots/one.png" height="400">
+<img src="screenshots/one.png" height="400" width="400" >
 </p>
 ---
 ## user_profile
