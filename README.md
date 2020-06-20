@@ -157,10 +157,17 @@ users can comment to any post and appear to it , Users see posts from homepage
 ---
 ## error_when_try_to_publish_empty_post
 
+ validation error when try to publish empty post and button to go home page 
+ 
+---
+
 ## recommendation_using_Ai 
 
-<img src="screenshots/two.png" height="400">
+This page belongs to treat posts which publish in page using natural language processing 
 
+<p align = "center">
+<img src="./img/recommend.PNG">
+</p>
 
 ---
 
