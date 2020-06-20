@@ -57,7 +57,7 @@ Used Tech Stack
 
 <p align = "center">
  
-<img src="./img/finaln.PNG" height="400" 
+<img src="./img/finaln.PNG" height="400">
  
 </p>
 
