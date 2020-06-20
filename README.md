@@ -138,6 +138,16 @@ users can comment to any post and appear to it , Users see posts from homepage
 </p>
 
 --- 
+
+### admin
+
+ each website has an owner and easily can add multible owner to administrate social media website and database
+ 
+ <p align = "center">
+<img src="./img/admin.PNG">
+</p>
+
+---
 ## error_when_try_to_publish_empty_post
 
 ## recommendation_using_Ai 
