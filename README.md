@@ -148,6 +148,13 @@ users can comment to any post and appear to it , Users see posts from homepage
 </p>
 
 ---
+* easily owner can change information that belongs to it and decide if he active or not
+
+<p align = "center">
+<img src="./img/change_admin.PNG">
+</p>
+
+---
 ## error_when_try_to_publish_empty_post
 
 ## recommendation_using_Ai 
