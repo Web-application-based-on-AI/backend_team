@@ -57,7 +57,7 @@ Used Tech Stack
 
 <p align = "center">
  
-<img src="./img/finaln.PNG" height="400">
+<img src="./img/finaln.PNG" height="400" width = "600">
  
 </p>
 
@@ -70,7 +70,7 @@ Used Tech Stack
 * we use this design in frontend using bootstrap to make social media responsive 
 
 <p align = "center">
-<img src="./img/homepage.PNG" height="400">
+<img src="./img/homepage.PNG" height="400" width = "600">
 </p>
 ---
 ## user_profile
