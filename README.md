@@ -97,6 +97,28 @@ New user must has an account with the following data:
 </p>
 
 ---
+
+
+## user_profile
+
+  each user have information that appear in homepage and easily can create this information 
+  this information appear in database and easily can change it
+  
+  <p align = "center">
+<img src="./img/create_profile.PNG">
+</p>
+
+---
+
+ user can update information which belongs to it and if he want to upload image this link to image is saved in database 
+
+<p align = "center">
+<img src="./img/edit_profile.PNG">
+</p>
+
+
+---
+
 ## Homepage
 
 * we use this design in frontend using bootstrap to make social media responsive 
@@ -107,17 +129,15 @@ New user must has an account with the following data:
 
 ---
 
-## user_profile
+### comment 
 
-  each user have information that appear in homepage and easily can change this information 
-  this information appear in database 
-  
-  <p align = "center">
-<img src="./img/create_profile.PNG">
+users can comment to any post and appear to it , Users see posts from homepage
+
+<p align = "center">
+<img src="./img/comment.PNG" width ="300" height = "400">
 </p>
 
----
-
+--- 
 ## error_when_try_to_publish_empty_post
 
 ## recommendation_using_Ai 
