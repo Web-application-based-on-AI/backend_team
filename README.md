@@ -53,6 +53,12 @@ Used Tech Stack
 
 ### Ai_model_on_heroku
 
+Ai model we deploy it on heroku to try model 
+
+<img src="./img/finaln.PNG" height="400">
+
+[link heroku](https://posts-classification.herokuapp.com/)
+
 
 ---
 ## Homepage
