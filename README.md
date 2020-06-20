@@ -22,9 +22,7 @@ In this section you will know More bout this interesting project :smiley:
 ### overview
 
  The idea of the project is summarized in how to make classify posts and determine which is spam or not and if spam, this post must be
- 
  discarded else insert post in database Ai model run on database and use it to classify post Make frontend form where each user can 
- 
  post in it and pass this post to ai model to classify it and determine number of like in this post 
  
  * Main goal of this project
