@@ -55,7 +55,8 @@ Used Tech Stack
 
 * Ai model we deploy it on heroku to try model 
 <p align = "center">
-<img src="./img/finaln.PNG" height="400" align="center">
+<!-- <img src="./img/finaln.PNG" height="400" align="center"> -->
+ []("./img/finaln.PNG")
 </p>
 
 [link heroku](https://posts-classification.herokuapp.com/)
