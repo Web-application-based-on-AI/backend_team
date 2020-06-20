@@ -109,6 +109,15 @@ New user must has an account with the following data:
 
 ## user_profile
 
+  each user have information that appear in homepage and easily can change this information 
+  this information appear in database 
+  
+  <p align = "center">
+<img src="./img/create_profile.PNG">
+</p>
+
+---
+
 ## error_when_try_to_publish_empty_post
 
 ## recommendation_using_Ai 
