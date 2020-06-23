@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+
+
+{% block content %}
+	<br>
+	{% include 'posts/create_post.html' %}
+	{% for post in posts %}
+		{% include 'posts/post.html' with post=post show_button=True %}
+	{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,27 @@
+<div class="w3-container w3-card w3-white w3-round w3-margin">
+    <div class="w3-row">
+        <div class="w3-col m2 w3-left">
+            <img src="{{comment.account_user.image.url}}" alt="Avatar" class="w3-left w3-circle w3-margin" style="height:50px;width:50px;object-fit: cover;">
+        </div>    
+        <div class="w3-col m10 w3-right">
+            <div class="w3-row">
+                <a href="{% url 'profiles:profile_others_view' user_id=comment.account_user.id %}">
+                <h3 class= "w3-left" style="text-transform:capitalize;">{{comment.account_user.full_name}}</h3>
+                </a>
+                <div class="w3-row w3-margin-top w3-right">
+                    <div class="w3-opacity">
+                        <small>{{comment.created_at}}</small>
+                    </div>
+                    {% if request.user == comment.account_user %}
+                    <a href="{% url 'comments:delete_comment' comment_id=comment.idcomment %}" class="w3-right" style="color: blue;">delete</a>
+                    {% endif %}
+                </div>
+               
+            </div>
+            <div class="w3-row w3-border w3-round w3-block">
+                <p class="w3-row w3-margin" style="overflow: hidden; text-overflow: ellipsis;  word-wrap: break-word;">{{comment.comment_text|linebreaksbr}}</p>
+            </div>
+        </div>
+    </div>
+    <br>
+</div>

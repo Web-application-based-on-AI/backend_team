@@ -1,0 +1,17 @@
+/*
+.like-details{
+  margin-left:10px;
+  color:#9197a3;
+  font-size:12px;
+}*/
+.btn-circle.btn-lg {
+      width: 50px;
+      height: 50px;
+      padding: 10px 16px;
+      font-size: 18px;
+      line-height: 1.33;
+      border-radius: 25px;
+    }
+    .hideIt{
+      visibility:hidden;
+      }

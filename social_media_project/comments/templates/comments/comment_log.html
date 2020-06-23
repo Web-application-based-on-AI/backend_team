@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load custom_tags%}
+{% block content %}
+    {%for comment in comments %}
+        {%if comment.posts_idposts.user_key == request.user%}
+            <div class="w3-row w3-card w3-margin">
+                <div class="w3-row w3-margin-top w3-margin-left w3-margin-right">
+                <p class="w3-left">you commented on <a style="color: blue;" href="{% url 'profiles:profile_others_view' user_id=comment.account_user.id %}">your</a>
+                    <a style="color: blue;" href="{% url 'posts:post_details' post_id=comment.posts_idposts.idposts %}"> post</a></p>
+                <small class="w3-right">{{comment.created_at}}</small>
+                </div>
+                <p class="w3-row w3-margin-bottom w3-margin-left" style="color:gray; overflow: hidden; text-overflow: ellipsis;  word-wrap: break-word;">{{comment.comment_text}}</p>
+            </div>
+        {% else %}
+            <div class="w3-row w3-card w3-margin">
+                <div class="w3-row w3-margin-top w3-margin-left w3-margin-right">
+                <p class="w3-left">you commented on <a style="color: blue;" href="{% url 'profiles:profile_others_view' user_id=comment.posts_idposts.user_key.id %}">{{comment.posts_idposts.user_key.full_name}}</a>
+                    's <a style="color: blue;" href="{% url 'posts:post_details' post_id=comment.posts_idposts.idposts %}">post</a></p>
+                <small class="w3-right">{{comment.created_at}}</small>
+                </div>
+                <p class="w3-row w3-margin-bottom w3-margin-left" style="color:gray;overflow: hidden; text-overflow: ellipsis;  word-wrap: break-word;">{{comment.comment_text}}</p>
+                
+            </div>
+        {% endif %}
+    {%endfor%}
+{% endblock %}

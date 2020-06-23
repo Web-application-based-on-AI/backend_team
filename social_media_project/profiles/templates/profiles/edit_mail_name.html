@@ -1,0 +1,29 @@
+{% load widget_tweaks %}
+
+<form action="{% url 'profiles:edit_mail_name' %}" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% for hidden in edit_mail_name_form.hidden_fields %}
+        {{ hidden }}
+    {% endfor %}
+    <div class="w3-row">    
+    {% for field in edit_mail_name_form.visible_fields %}
+        <div class="w3-row">
+            <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+            {{field|add_class:"w3-input w3-border"}}
+            {% if field.help_text %}
+                <small>{{field.help_text}}</small>
+            {% endif %}
+            {%for error in field.errors %}
+                <div>
+                    <small style="color:mediumturquoise">{{ error }}</small>
+                </div>
+            {% endfor %}
+        </div>
+        <br>
+    {% endfor %}
+    </div>
+    <br>
+    <div>
+        <input type="submit" class="w3-btn w3-white w3-border w3-border-blue w3-round-xlarge"  class="w3-display-right" value="Save">
+    </div>
+</form>

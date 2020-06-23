@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load custom_tags%}
+
+{% block profile_options %}
+<div class="w3-row w3-center w3-margin-bottom w3-margin-top">
+    <a href="/profile/edit" class="w3-center" title="edit profile"><button class="w3-button w3-block w3-teal">Edit Profile</button></a>
+</div>
+<div class="w3-row w3-center w3-margin-bottom">
+    <a href="{% url 'posts:user_posts' user_id=request.user.id %}" class="w3-center" title="My posts"><button class="w3-button w3-block w3-teal">My posts</button></a>
+</div>
+<div class="w3-row w3-center w3-margin-bottom">
+    <a href="{% url 'comments:comment_log'%}" class="w3-center" title="Comments log"><button class="w3-button w3-block w3-teal">Comments log</button></a>
+</div>
+<br>
+{% endblock %}
+{% block content %}
+    {%if request.user != profile_obj.account_user%}
+    <div class="w3-display-container w3-row">
+        <div class="w3-col m2 w3-left">
+            <img src="{{profile_obj.account_user.image.url}}" id="pic" class="w3-circle" style="height:106px;width:106px;object-fit: cover" alt="Avatar"/>
+        </div>
+        <div class="w3-col m8 w3-display-middle">
+            <h3  style = "text-transform:capitalize;font-weight: bold;">{{profile_obj.account_user.full_name}}</h4>
+            <a href="{% url 'posts:user_posts' user_id=profile_obj.account_user.id %}" style="text-transform:capitalize;">{{profile_obj.account_user.full_name}}'s Posts</a>
+        </div>
+    </div>
+    <hr>
+    {% endif %}
+    {% include 'profiles/profile_template.html' with profile_obj=profile_obj user=profile_obj.account_user%}
+    
+{% endblock %}

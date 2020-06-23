@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% block content %}
+<br>
+<div class="w3-row-padding">
+    <div class="w3-col m12">
+        <div class="w3-card w3-round w3-white">
+            <div class="w3-container w3-padding">
+                <button onclick="myFunction('na')" class="w3-button w3-block w3-left-align">Name & Email</button> 
+                <div id="na" class="w3-container w3-hide">
+                    <br>
+                    {% include 'profiles/edit_mail_name.html' with edit_mail_name_form=edit_mail_name_form %}
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<div class="w3-row-padding">
+    <div class="w3-col m12">
+        <div class="w3-card w3-round w3-white">
+            <div class="w3-container w3-padding">
+                <button onclick="myFunction('pa')" class="w3-button w3-block w3-left-align">Password</button>
+                <div id="pa" class="w3-container w3-hide">
+                    <br>
+                    {% include 'profiles/edit_password.html' with edit_password_form=edit_password_form %}
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<div class="w3-row-padding">
+    <div class="w3-col m12">
+        <div class="w3-card w3-round w3-white">
+            <div class="w3-container w3-padding">
+                <button onclick="myFunction('info')" class="w3-button w3-block w3-left-align">Personal information</button>
+                <div id="info" class="w3-container w3-hide">
+                    <br>
+                    {% include 'profiles/edit_info.html' with edit_info_form=edit_info_form%}
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+{% endblock %}

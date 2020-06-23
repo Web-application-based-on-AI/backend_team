@@ -1,0 +1,22 @@
+{% load widget_tweaks %}
+<form method="post" action="{% url 'comments:add_comment' post_id=post_id%}">
+    {% csrf_token %}
+    {% for field in comment_form.visible_fields %}
+    <div class="w3-col m9">
+        {{field|add_class:'w3-block w3-input w3-border w3-margin'|attr:"placeholder:Enter comment here"}}
+        {% if field.help_text %}
+            <small>{{field.help_text}}</small>
+        {% endif %}
+        {%for error in field.errors %}
+            <div class="w3-margin-left">
+                <small style="color:mediumturquoise">{{ error }}</small>
+            </div>
+            <br>
+        {% endfor %}
+    </div>
+    {% endfor %}
+
+    <div class="w3-col m2 w3-quarter w3-margin">
+        <input type="submit" class="w3-btn w3-white w3-border w3-border-blue w3-round-large w3-right"  class="w3-display-right" value="Comment">
+    </div>
+</form>

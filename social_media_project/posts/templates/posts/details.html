@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+
+
+{% block content %}
+    {% include 'posts/post.html' with post=post %}
+    <div class="w3-container w3-card w3-white w3-round w3-margin">
+    {% include 'comments/comment_form.html' with comment_form=comment_form post_id=post.idposts %}
+    </div>
+    {% for comment in comments %}
+        {% include 'comments/comment.html' with comment=comment %}
+    {% endfor %}
+{% endblock %}

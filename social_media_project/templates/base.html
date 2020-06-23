@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+{% load custom_tags%}
+{%if request.user.is_authenticated%}
+    {%get_profile_informations request.user as profile%}
+{% endif %}
+<title>{{title}}</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link rel='stylesheet' href="/static/css/master.css">
+<style>
+    html {
+    overflow: -moz-scrollbars-vertical; 
+    overflow-y: scroll;
+    }
+    html,
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    th {
+        font-family:Arial, Helvetica, sans-serif;
+    }
+    h3{
+        font-size: 25px;
+        color:#435761;
+    }
+    .details
+    {
+        border-bottom: solid #435761 3px;
+        width: 350px;
+        padding: 10px 0 20px 30px;
+        font-size: 13px;
+    }
+</style>
+<!-- <script type="text/javascript" src="jquery.min.js"></script> -->
+<!-- jQuery for Reaction system -->
+<!-- <script type="text/javascript" src="reaction.js"></script>
+ -->
+
+<body class="w3-theme-l5">
+
+    <!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
+            <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+            <a href="/" class="w3-bar-item w3-button w3-padding w3-theme-d4" style="text-decoration: none;"><i class="fa fa-home w3-margin-right"></i>
+                <img src="/media/images/logo.png" class="w3-circle"  style="height:34px;width:34px;object-fit: cover" alt="Avatar">
+            </a>
+            {% if request.user.is_anonymous %}
+            <a href="/account/login" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="log in">Log in</i></a>
+            <a href="/account/signup" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="sing up">Sign up</a>
+            {%else%}
+            <a href="/account/logout" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="log out">Log out</i></a>
+            {% if request.user.is_staff %}
+            <a href="/staff_page" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="staff Page">Staff Page</i></a>
+            {% endif %}
+            <a href="/profile" style = "text-transform:capitalize;" class="w3-theme-d4 w3-bar-item w3-button w3-hide-small w3-right w3-padding w3-hover-white" title="My Account">
+                {{request.user.full_name}}
+                {%if profile%} 
+                <img src="{{request.user.image.url}}" class="w3-circle" style="height:34px;width:34px;object-fit: cover" alt="Avatar">
+                {%else%}
+                <img src="/media/images/avatar.png" class="w3-circle" style="height:23px;width:23px" alt="Avatar">
+                {%endif%}
+            </a>
+            {%endif%}   
+        </div>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
+        <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large">My Profile</a>
+    </div>
+
+    <!-- Page Container -->
+    <div class="w3-container w3-content" style="max-width:1400px;margin-top:80px;margin-bottom:60px">
+        <!-- The Grid -->
+        <div class="w3-row">
+           
+            <!-- Left Column -->
+            <div class="w3-col m3">
+                <!-- Profile -->
+                {%if request.user.is_authenticated%}
+                <div class="w3-card w3-round w3-white">
+                    <div class="w3-container">
+                        {%if profile%}
+                            <p class="w3-center">
+                                <img src="{{request.user.image.url}}" id="pic" class="w3-circle" style="height:106px;width:106px;object-fit: cover" alt="Avatar"/>
+                            </p>
+                            <h4 class="w3-center" style = "text-transform:capitalize;">{{request.user.full_name}}</h4>
+                            <hr>
+                            <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i> {{profile.career}}</p>
+                            <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i>{{profile.country}}</p>
+                            <p><i class="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i> {{profile.birthdate}}</p>
+                        {%else%}
+                            <p class="w3-center">
+                                <img src="/media/images/avatar.png" id="pic" class="w3-circle" style="height:106px;width:106px" alt="Avatar"/>
+                            </p>
+                            <h4 class="w3-center" style = "text-transform:capitalize;">{{request.user.full_name}}</h4>
+                            <h4 class="w3-center">You don't have profile!</h4>
+                        {%endif%}
+                            {% block profile_options %}
+                            {% endblock %}
+                    </div>
+                </div>
+                {% endif %}
+                <br>
+
+   
+
+                
+            </div>
+            <!-- End Left Column -->
+            
+            <!-- Middle Column -->
+            <div class="w3-col m7">
+                <div class="w3-row-padding">
+                    <div class="w3-col m12">
+                        <div class="w3-card w3-round w3-white">
+                            <div class="w3-container w3-padding">
+                                {% block content %}
+                                {% endblock %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <!-- Right Column -->
+            <div class="w3-col m2">
+                
+
+                <!-- End Right Column -->
+            </div>
+
+            <!-- End Grid -->
+        </div>
+
+        <!-- End Page Container -->
+    </div>
+    <br>
+
+    <!-- Footer -->
+    <footer class="w3-container w3-theme-d3 w3-padding-10 w3-bottom">
+        <h5>Footer</h5>
+    </footer>
+
+    <script src="https://unpkg.com/vue@2.0.7/dist/vue.js"></script> 
+    <script src="/static/js/Edit.js"> </script>
+    <script src="/static/js/jquery.min.js"> </script>
+    <script src="/static/js/render.js"> </script>
+    
+   
+
+</body>
+
+</html>

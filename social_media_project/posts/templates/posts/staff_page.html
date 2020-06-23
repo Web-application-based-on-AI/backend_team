@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+
+
+{% block content %}
+	<form method="post" action="{% url 'posts:staff_page' %}">
+        {% csrf_token %}
+        <label for="from_date">Get form date:</label>
+        <input type="date" id="from_date" name="from_date" required> 
+        <button type="submit" class="w3-button w3-theme w3-right">Submit </button>
+    </form>
+
+{% endblock %}

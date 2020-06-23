@@ -1,0 +1,37 @@
+{% extends 'account/base.html' %}
+{% load widget_tweaks %}
+
+{% block content %}
+<form action="{% url 'account:login' %}" method="POST">
+    {% csrf_token %}
+    {% for hidden in login_form.hidden_fields %}
+        {{ hidden }}
+    {% endfor %}    
+    {% for field in login_form.visible_fields %}
+    <div class="group">
+        <label for="{{ field.id_for_label }}" class="label">{{ field.label }}</label>
+        {{field|add_class:'input'}}
+        {% if field.help_text %}
+            <small>{{field.help_text}}</small>
+        {% endif %}
+        {%for error in field.errors %}
+            <div>
+                <small style="color:mediumturquoise">{{ error }}</small>
+            </div>
+        {% endfor %}
+    </div>
+    {% endfor %}
+    {%for error in login_form.non_field_errors %}
+        <div class="group">
+            <small style="color:#ff0000">{{ error }}</small>
+        </div>
+    {% endfor %}
+    <div class="group">
+        <input type="submit" class="button" value="login">
+    </div>
+</form>
+<div class="hr"></div>
+<div class="foot-lnk">
+    <a href="{% url 'account:signup' %}"><label>Sign Up</label></a>
+</div>
+{% endblock %}

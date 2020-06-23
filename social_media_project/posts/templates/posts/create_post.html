@@ -1,0 +1,14 @@
+<div class="w3-row-padding">
+    <div class="w3-col m12">
+        <div class="w3-card w3-round w3-white">
+            <div class="w3-container w3-padding">
+                <form method="post" action="{% url 'posts:create_post' %}">
+                    {% csrf_token %}
+                    <input type="text" class="w3-left w3-border w3-padding w3-threequarter" name="post_content" placeholder="post in" onsubmit="required()">
+                    <!-- <input type="text" class="w3-border w3-padding" name="post_content" placeholder="post in" onsubmit="required()"> -->
+                    <button type="submit" class="w3-button w3-theme w3-right"><i class="fa fa-pencil" ></i>  Post </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
